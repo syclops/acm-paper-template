@@ -1,0 +1,106 @@
+% Any commands that need to be run before the \documentclass command below
+% should be done in the preclass file below.
+\input{setup/preclass}
+
+% Read your conference/journal submission guidelines for what options to include
+% here.
+\documentclass[sigconf]{acmart}
+
+% Do any other setup of packages, commands, in the relevant setup file, imported
+% with the following file.
+\input{setup/main}
+
+\begin{document}
+
+\title{Title Here
+}
+
+\ifcameraready{}
+  % This is an author block - add one for each author.
+  \author{Real Name 1}
+  \email{Real Email 1}
+  \orcid{Real ORCID 1}
+  % Below is the affiliation. Multiple authors can share one affiliation;
+  % just copy the above lines as many times as needed for authors sharing an
+  % affiliation.
+  \affiliation{%
+    \institution{Real Institution 1}
+    \city{Real City 1}
+    % State is optional; include it according to the customs of the country in
+    % which your institution is located.
+    \state{Real State 1}
+    \country{Real Country 1}
+  }
+  % Copied from ACM template.
+  % By default, the full list of authors will be used in the page headers.
+  % Often, this list is too long, and will overlap other information printed in
+  % the page headers. This command allows the author to define a more concise
+  % list of authors' names for this purpose.
+  %\renewcommand{\shortauthors}{Real Name et al.}
+\else
+  % Some venues use anonymized author blocks like this rather than the anonymous
+  % option in the acmart document class, to ensure that the number of pages is
+  % accurate. In that case, make author blocks in the same structure as for real
+  % names above.
+  \author{Placeholder Name 1}
+  \email{Placeholder Email 1}
+  \orcid{Placeholder ORCID 1}
+  \affiliation{%
+    \institution{Placeholder Institution 1}
+    \city{Placeholder City 1}
+    \state{Placeholder State 1}
+    \country{Placeholder Country 1}
+  }
+  %\renewcommand{\shortauthors}{Placeholder Name et al.}
+\fi
+
+% For the ACM format, the abstract comes before the maketitle command.
+\input{sec/abstract}
+
+% ACM requires information on the relevant CCS concepts and keywords. Include
+% that here.
+\input{setup/keywords}
+
+% This is where the title, authors, etc. are actually placed. The location of
+% this command, or the command itself, may vary depending on the template.
+% Unlike most other templates, we don't also call \thispagestyle{empty} because
+% we've redefined \maketitle in a way that doesn't change the page style.
+\maketitle
+
+% Place all needed sections, including the abstract, here. In some cases, other
+% commands may need to be placed in between sections (e.g., some styles place
+% keywords between the abstract and main paper body). There's almost always an
+% abstract, intro, and conclusion, so place those here.
+
+\input{sec/intro}
+
+\input{sec/theory}
+
+\input{sec/methods}
+
+\input{sec/results}
+
+\input{sec/discussion}
+
+\input{sec/acknowledgments}
+
+% Specify the bibliography style and file here. The style will depend on which
+% template you use, but the file (bib.bib in this case) can be left as is,
+% unless you rename that file.
+\bibliographystyle{ACM-Reference-Format}
+% Some venues require you to balance the final two columns, which typically
+% consists of references. Include the line below if needed, or comment it out if
+% not.
+\balance{}
+\bibliography{bib}
+
+% Some templates put appendices after the bibliography. If so, feel free to add
+% them here. Make sure that the relevant files (e.g., app/foo.tex) exist.
+%\appendix
+%\input{app/foo}
+
+\end{document}
+
+% Anything here or later will be ignored in the final document, so feel free to
+% put notes/etc here.
+
