@@ -29,6 +29,20 @@
 %\renewcommand{\citedash}{--}
 %
 % Required: enumitem
+% In the ACM template, the \DocumentMetadata command uses the latest testphase
+% packages, which loads enumitem without options for PDF tagging and
+% accessibility. The inline option shouldn't break any of those properties, but
+% we can't change the ACM template to do this, so create those environments here
+% instead.
+\newenvironment{enumerate*}[1][]%
+  {\@nameuse{enit@enumerate*}\enitdp@enumerate{enum}\thr@@{#1}}
+  {\@nameuse{enit@endenumerate*}}
+\newenvironment{itemize*}[1][]%
+  {\@nameuse{enit@itemize*}\enitdp@itemize{item}\thr@@{#1}}
+  {\@nameuse{enit@enditemize*}}
+\newenvironment{description*}[1][]%
+  {\@nameuse{enit@description*}\enitdp@description{description}\@M{#1}}
+  {\@nameuse{enit@enddescription*}}
 % Environment to define commonly-used list types.
 % - The default enumerated list has quite a bit of spacing, so make it more
 %   compact.

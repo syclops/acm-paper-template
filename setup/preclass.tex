@@ -1,3 +1,23 @@
 % Occasionally, some commands need to be run before the documentclass
 % declaration. Place them here.
 
+% Copied from the ACM sigconf template.
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%% The tagged file should start with the metadata commands.
+\DocumentMetadata{
+ pdfversion=2.0,pdfstandard=ua-2,
+ testphase=latest,
+ tagging=on,
+ tagging-setup={math/setup=mathml-SE},
+ lang = en
+ }

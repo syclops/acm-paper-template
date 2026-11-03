@@ -1,2 +1,14 @@
 % Any miscellaneous preamble commands can be done here.
 
+% The \DocumentMetadata command in the ACM template enables PDF tagging, which
+% due to a bug in the acmart class leads to a blank page being created at the
+% start of the PDF. Patch the command here to prevent this. This might break PDF
+% tagging in places for some types of ACM templates; hopefully it gets fixed
+% upstream soon.
+\makeatletter
+\IfDocumentMetadataT{%
+	\pretocmd{\@printtopmatter}{\tagpdfparaOff}{}{\PackageWarning{paper}{Could not patch \string\@printtopmatter}}%
+	\apptocmd{\@printtopmatter}{\tagpdfparaOn}{}{\PackageWarning{paper}{Could not patch \string\@printtopmatter}}%
+}
+\makeatother
+

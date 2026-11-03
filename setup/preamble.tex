@@ -5,13 +5,30 @@
 % anything in the template that doesn't fit elsewhere in setup and comes before
 % the \begin{document} command should go here.
 
-% For example, in ACM paperes, there's often a copyright section like the one
-% below. Uncomment it 
-%\setcopyright{acmlicensed}
-%\copyrightyear{2018}
-%\acmYear{2018}
-%\acmDOI{XXXXXXX.XXXXXXX}
-%\acmConference[Conference acronym 'XX]{Make sure to enter the correct
-  %conference title from your rights confirmation email}{June 03--05,
-  %2018}{Woodstock, NY}
-%\acmISBN{978-1-4503-XXXX-X/2018/06}
+% Copied from the ACM sigconf template.
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmlicensed}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[Conference acronym 'XX]{Make sure to enter the correct
+  conference title from your rights confirmation email}{June 03--05,
+  2018}{Woodstock, NY}
+%%
+%%  Uncomment \acmBooktitle if the title of the proceedings is different
+%%  from ``Proceedings of ...''!
+%%
+%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%%  June 03--05, 2018, Woodstock, NY}
+\acmISBN{978-1-4503-XXXX-X/2018/06}
